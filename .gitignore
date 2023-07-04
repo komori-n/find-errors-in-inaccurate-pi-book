@@ -1,0 +1,10 @@
+data/
+img/
+old/
+__pycache__/
+.vscode/
+
+.DS_Store
+*.txt
+*.ipynb
+!pi-1m.txt
