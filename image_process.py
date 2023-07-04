@@ -9,7 +9,7 @@ class TextImage:
         self._vertical_imgs = None
         self._cell_imgs = None
 
-    def row(self, i: int, j: int) -> cv2.Mat:
+    def row(self, i: int) -> cv2.Mat:
         if self._vertical_imgs is None:
             self._make_vertical_images()
 
