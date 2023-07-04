@@ -15,7 +15,7 @@ def show_question(img: cv2.Mat, test: str, ans: str) -> Optional[str]:
 
     ret = None
     while True:
-        user_input = input("please type correct: ").strip()
+        user_input = input("number: ").strip()
         if len(user_input) != 10:
             continue
 

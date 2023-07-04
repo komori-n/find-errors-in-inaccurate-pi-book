@@ -26,13 +26,9 @@ class TextImage:
         vertical_imgs = _make_contour_images(
             self.img, vertical_rects, vertical_contours, 10
         )
-        vertical_imgs = list(
-            map(lambda img: cv2.resize(img, None, fx=2.0, fy=2.0), vertical_imgs)
-        )
+        vertical_imgs = [cv2.resize(img, None, fx=2.0, fy=2.0) for img in vertical_imgs]
 
         self._vertical_imgs = vertical_imgs
-        self._vertical_rects = vertical_rects
-        self._vertical_contours = vertical_contours
 
     def _make_cell_images(self):
         if self._vertical_imgs is None:

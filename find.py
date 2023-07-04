@@ -21,11 +21,12 @@ def print_all_mistakes(s_ans: str, s_test: str, idx_offset: int):
             skip_until = chunk_end
 
             idx = idx_offset + chunk_start
-            row = idx // 100
+            page = idx // 10000
+            row = idx // 100 % 100
             col = (idx // 10) % 10
             print(
-                f"{str(row).zfill(5)}, {str(col).zfill(5)}",
-                f"ans:{substr_ans} book:{substr_test}",
+                f"{str(page+1).zfill(3)},{str(row).zfill(3)},{str(col).zfill(2)}, {substr_test}",
+                f"ans:{substr_ans}",
             )
 
 
@@ -38,7 +39,7 @@ def main(datapath: str):
 
     ans = ans[2:]  # skip "3."
 
-    for i in range(1, 4):
+    for i in range(1, 101):
         csvpath = os.path.join(datapath, str(i).zfill(3) + ".csv")
 
         x = ""
