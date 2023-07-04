@@ -1,6 +1,6 @@
 # find-errors-in-inaccurate-pi-book
 
-暗黒通信団『間違いだらけの円周率1,000,000桁表』の間違いを見つけるためのPythonスクリプトたち。
+暗黒通信団『間違いだらけの円周率1,000,000桁表』の間違いを見つけるためのPythonスクリプト。
 
 ## 準備
 
@@ -14,6 +14,8 @@ python -m venv pi
 source pi/bin/activate
 pip install -r requirements.txt
 ```
+
+お使いの環境によっては、TesseractやOpenCVのセットアップが必要になる場合があります。
 
 ### スキャン画像
 
