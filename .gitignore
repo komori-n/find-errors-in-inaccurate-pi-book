@@ -1,5 +1,4 @@
 data/
-img/
 old/
 __pycache__/
 .vscode/
@@ -10,3 +9,4 @@ __pycache__/
 
 !pi-1m.txt
 !requirements.txt
+!/img/.gitkeep
